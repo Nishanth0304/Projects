@@ -1,0 +1,69 @@
+<!-- main
+├── header
+├── div
+├── section
+│   ├── h2
+│   ├── img
+│   └── ul
+│       ├── li
+│       └── li
+├── nav
+├── article
+│   ├── h3
+│   ├── div
+│   │   └── p   ← Matched
+│   └── button
+└── footer -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example 2</title>
+
+    <style>
+        main > div + section ~ article p {
+            color: white;
+            background: green;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<main>
+
+    <header>Header Area</header>
+
+    <div>Banner</div>
+
+    <section>
+        <h2>Section</h2>
+
+        <img src="image.jpg" width="100">
+
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+    </section>
+
+    <nav>Navigation</nav>
+
+    <article>
+        <h3>Article Title</h3>
+
+        <div>
+            <p>Matched Paragraph</p>
+        </div>
+
+        <button>Click Me</button>
+    </article>
+
+    <footer>Footer</footer>
+
+</main>
+
+</body>
+</html>

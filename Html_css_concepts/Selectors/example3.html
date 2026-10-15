@@ -1,0 +1,60 @@
+<!-- section
+├── h1
+├── div
+│   ├── p
+│   └── img
+├── aside
+├── article
+│   ├── h2
+│   ├── nav
+│   └── div
+│       └── a   ← Matched
+└── footer -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example 3</title>
+
+    <style>
+        section > h1 + div ~ article a {
+            color: white;
+            background-color: blue;
+            padding: 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<section>
+
+    <h1>Website Title</h1>
+
+    <div>
+        <p>Introduction</p>
+        <img src="pic.jpg" width="100">
+    </div>
+
+    <aside>Advertisement</aside>
+
+    <article>
+
+        <h2>Article</h2>
+
+        <nav>Menu</nav><br>
+
+        <div>
+            <a href="#">Matched Link</a><br><br>
+        </div>
+
+    </article>
+
+    <footer>Footer</footer>
+
+</section>
+
+</body>
+</html>

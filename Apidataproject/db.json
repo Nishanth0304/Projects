@@ -1,0 +1,125 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Rahul Sharma",
+      "age": 22,
+      "course": "Angular",
+      "email": "rahul@gmail.com",
+      "city": "Hyderabad"
+    },
+    {
+      "id": "2",
+      "name": "Priya Reddy",
+      "age": 21,
+      "course": "Java",
+      "email": "priya@gmail.com",
+      "city": "Bangalore"
+    },
+    {
+      "id": "3",
+      "name": "Arjun Kumar",
+      "age": 23,
+      "course": "Python",
+      "email": "arjun@gmail.com",
+      "city": "Chennai"
+    },
+    {
+      "id": "4",
+      "name": "Sneha Patel",
+      "age": 22,
+      "course": "React",
+      "email": "sneha@gmail.com",
+      "city": "Mumbai"
+    },
+    {
+      "id": "5",
+      "name": "David John",
+      "age": 24,
+      "course": "Node.js",
+      "email": "david@gmail.com",
+      "city": "Pune"
+    },
+    {
+      "id": "6",
+      "name": "Anjali Singh",
+      "age": 20,
+      "course": "Angular",
+      "email": "anjali@gmail.com",
+      "city": "Delhi"
+    },
+    {
+      "id": "7",
+      "name": "Rohan Verma",
+      "age": 23,
+      "course": "Spring Boot",
+      "email": "rohan@gmail.com",
+      "city": "Kolkata"
+    },
+    {
+      "id": "8",
+      "name": "Meera Nair",
+      "age": 22,
+      "course": "Java",
+      "email": "meera@gmail.com",
+      "city": "Kochi"
+    },
+    {
+      "id": "9",
+      "name": "Karthik Rao",
+      "age": 24,
+      "course": "Angular",
+      "email": "karthik@gmail.com",
+      "city": "Hyderabad"
+    },
+    {
+      "id": "10",
+      "name": "Pooja Mehta",
+      "age": 21,
+      "course": "Python",
+      "email": "pooja@gmail.com",
+      "city": "Ahmedabad"
+    },
+    {
+      "id": "11",
+      "name": "Aman Gupta",
+      "age": 23,
+      "course": "React",
+      "email": "aman@gmail.com",
+      "city": "Jaipur"
+    },
+    {
+      "id": "12",
+      "name": "Neha Joshi",
+      "age": 22,
+      "course": "Node.js",
+      "email": "neha@gmail.com",
+      "city": "Nagpur"
+    },
+    {
+      "id": "13",
+      "name": "Vikram Reddy",
+      "age": 24,
+      "course": "Spring Boot",
+      "email": "vikram@gmail.com",
+      "city": "Visakhapatnam"
+    },
+    {
+      "id": "14",
+      "name": "Divya Iyer",
+      "age": 20,
+      "course": "Angular",
+      "email": "divya@gmail.com",
+      "city": "Coimbatore"
+    },
+    {
+      "id": "15",
+      "name": "Suresh Kumar",
+      "age": 25,
+      "course": "Full Stack",
+      "email": "suresh@gmail.com",
+      "city": "Mysore"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

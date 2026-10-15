@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure HTML5 Tag Demonstration</title>
+    
+    
+</head>
+<body>
+
+  
+    <header>
+        <h1>Website Header Zone</h1>
+        <p>This area typically contains the main heading and primary navigation links.</p>
+        
+        <nav>
+            <p><strong>Navigation Menu Links:</strong></p>
+            <ul>
+                <li><a href="#text-formatting">Text Formatting</a></li>
+                <li><a href="#lists-links">Lists & Links</a></li>
+                <li><a href="#media-content">Media Content</a></li>
+                <li><a href="#forms-inputs">Forms & Inputs</a></li>
+                <li><a href="#tables-section">Tables</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        
+        <section id="text-formatting">
+            <h2>3. Text Formatting & Structure</h2>
+            
+            <h1>Heading Level 1</h1>
+            <h2>Heading Level 2</h2>
+            <h3>Heading Level 3</h3>
+            <h4>Heading Level 4</h4>
+            <h5>Heading Level 5</h5>
+            <h6>Heading Level 6</h6>
+            
+            <p>This is a standard paragraph of text created with the p tag. <br>
+            A break tag was just used to force this text onto a completely new line.</p>
+            
+            <p>
+                Here is how we display <strong>strong important text</strong>, 
+                <em>emphasized text in italics</em>, and 
+                <mark>marked or highlighted text</mark>.
+            </p>
+            
+            <p>You can read about <small>small print text right here</small> for copyright notes.</p>
+            
+            <p>Chemical formulas look like H<sub>2</sub>O using subscript, while math expressions look like E=mc<sup>2</sup> using superscript.</p>
+            
+            <p>Document edits can show <del>deleted text with a strikethrough</del> or <ins>inserted text with an underline</ins>.</p>
+            
+            <p>To show a single line of code, use the <code>console.log("Hello World")</code> tag.</p>
+            
+            <p>If you need to preserve exact block code spaces and indentation, use the pre tag:</p>
+
+
+            <blockquote>
+                "This is a blockquote element. It is used to separate and indent a long block of text quoted from an external source."
+            </blockquote>
+
+            <!-- Interactive details widget -->
+            <details>
+                <summary>Click here to expand the disclosure widget</summary>
+                <p>Hidden content revealed! This text is tucked inside a details container until you click the summary heading.</p>
+            </details>
+        </section>
+
+        <hr>
+
+        <!-- 4. Lists & Links -->
+        <section id="lists-links">
+            <h2>4. Lists & Links</h2>
+            
+            <h3>Unordered List</h3>
+            <ul>
+                <li>Apples</li>
+                <li>Bananas</li>
+                <li>Oranges</li>
+            </ul>
+
+            <h3>Ordered List</h3>
+            <ol>
+                <li>First Step</li>
+                <li>Second Step</li>
+                <li>Third Step</li>
+            </ol>
+
+            <h3>Description List</h3>
+            <dl>
+                <dt>HTML5</dt>
+                <dd>The standard markup language for creating web pages.</dd>
+                <dt>Browser</dt>
+                <dd>A software application used to access and view websites.</dd>
+            </dl>
+
+            <p>This is a standard hyperlink leading to <a href="https://example.com" target="_blank">Example.com</a> via the anchor tag.</p>
+        </section>
+
+        <hr>
+
+        <!-- 5. Media & Embedded Content -->
+        <section id="media-content">
+            <h2>5. Media & Embedded Content</h2>
+            
+            <article>
+                <h3>An Article Post</h3>
+                <p>The layout wraps self-contained text blocks like this individual article segment.</p>
+                
+                <figure>
+                    <img src="https://via.placeholder.com/300x150" alt="A grey placeholder graphic placeholder" width="300" height="150">
+                    <figcaption>Figure 1: This is a figure caption describing the image layout above.</figcaption>
+                </figure>
+            </article>
+
+            <aside>
+                <h3>Aside Content Box</h3>
+                <p>This text acts like a sidebar callout. It holds secondary information related to the page content.</p>
+            </aside>
+
+            <h3>Audio, Video, and Iframes</h3>
+            <p>Audio Player:</p>
+            <audio controls>
+                <source src="audio-sample.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <p>Video Player:</p>
+            <video width="320" height="240" controls>
+                <source src="video-sample.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <p>Inline Frame (Iframe):</p>
+            <iframe src="https://example.com" width="100%" height="200" title="Embedded Example Site"></iframe>
+        </section>
+
+        <hr>
+
+        <!-- 6. Forms & Inputs -->
+        <section id="forms-inputs">
+            <h2>6. Forms & Inputs</h2>
+            
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>User Account Information</legend>
+                    
+                    <p>
+                        <label for="username">Username Field:</label>
+                        <input type="text" id="username" name="username" placeholder="Your name...">
+                    </p>
+                    
+                    <p>
+                        <label for="user-role">Select a Role:</label>
+                        <select id="user-role" name="user-role">
+                            <optgroup label="Technical Team">
+                                <option value="dev">Developer</option>
+                                <option value="design">Designer</option>
+                            </optgroup>
+                            <optgroup label="Management Team">
+                                <option value="pm">Project Manager</option>
+                            </optgroup>
+                        </select>
+                    </p>
+                    
+                    <p>
+                        <label for="comments">Multi-line Textarea Message:</label><br>
+                        <textarea id="comments" name="comments" rows="4" cols="40" placeholder="Leave your comments here..."></textarea>
+                    </p>
+                    
+                    <p>
+                        <button type="submit">Submit Form Button</button>
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- 7. Tables -->
+        <section id="tables-section">
+            <h2>7. Tables</h2>
+            
+            <table border="1">
+                <caption>Employee Classification Registry</caption>
+                <tr>
+                    <th>Header Cell: ID</th>
+                    <th>Header Cell: Name</th>
+                    <th>Header Cell: Position</th>
+                </tr>
+                <tr>
+                    <td>Data Cell: 101</td>
+                    <td>Data Cell: Alice Smith</td>
+                    <td>Data Cell: Software Engineer</td>
+                </tr>
+                <tr>
+                    <td>Data Cell: 102</td>
+                    <td>Data Cell: Bob Jones</td>
+                    <td>Data Cell: UI Designer</td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- 8. Generic Layout Elements -->
+        <section id="generic-layouts">
+            <h2>8. Generic Layout Elements (Div & Span)</h2>
+            
+            <div>
+                <p>This whole block is nested inside a generic division tag. It functions as a layout box container, separating its contents from the elements around it.</p>
+                <p>We can pinpoint a <span style="text-decoration: underline;">specific piece of phrase text</span> inside a line using an inline span container tag.</p>
+            </div>
+        </section>
+    </main>
+
+    <hr>
+
+
+    <footer>
+        <p>&copy; 2026 Semantic HTML Sandbox Guide. Built completely with raw tag markup.</p>
+    </footer>
+
+</body>
+</html>

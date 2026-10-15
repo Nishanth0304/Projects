@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Selectors Master Guide</title>
+  <style>
+    /* ==========================================
+       5) UNIVERSAL SELECTOR (*)
+       ========================================== */
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* ==========================================
+       1) ELEMENT, 2) ID, 3) CLASS, 4) GROUPING
+       ========================================== */
+    body {
+      background-color: #f4f7f6;
+      padding: 40px;
+      color: #333;
+    }
+
+    #main-heading {
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    /* Grouping Selector */
+    h2, h3, h4 {
+      color: #16a085;
+      margin-top: 0;
+    }
+
+    /* ==========================================
+       PSEUDO-ELEMENT SELECTORS
+       ========================================== */
+    .pseudo-elem::before {
+      content: "🚀 ";
+    }
+    .pseudo-elem::after {
+      content: " (Read details below)";
+      font-size: 0.8rem;
+      color: #7f8c8d;
+    }
+    .drop-cap::first-letter {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #e74c3c;
+      float: left;
+      margin-right: 8px;
+      line-height: 1;
+    }
+    .dynamic-line::first-line {
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #2980b9;
+    }
+    .custom-list li::marker {
+      content: "⚡ ";
+      color: #f1c40f;
+    }
+    ::selection {
+      background-color: #f1c40f;
+      color: #000;
+    }
+
+    /* ==========================================
+       DYNAMIC PSEUDO-CLASS SELECTORS
+       ========================================== */
+    .btn-links a:link { color: #3498db; text-decoration: none; }
+    .btn-links a:visited { color: #9b59b6; }
+    .btn-links a:hover { color: #e74c3c; text-decoration: underline; }
+    .btn-links a:active { color: #2ecc71; font-weight: bold; }
+
+    /* ==========================================
+       STRUCTURAL PSEUDO-CLASS SELECTORS
+       ========================================== */
+    .struct-container p:first-child { color: red; font-weight: bold; }
+    .struct-container p:last-child { color: blue; font-weight: bold; }
+    
+    .struct-container span:first-of-type { background-color: #ffeaa7; padding: 2px; }
+    .struct-container span:last-of-type { background-color: #fab1a0; padding: 2px; }
+    
+    .struct-container ul li:nth-child(even) { background-color: #f2f2f2; }
+
+    /* ==========================================
+       COMBINATOR SELECTORS
+       ========================================== */
+    /* Descendant (space) */
+    .combinator-box span { color: #e67e22; font-weight: bold; }
+    
+    /* Child Selector (>) */
+    .combinator-box > p { border-left: 4px solid #1abc9c; padding-left: 10px; }
+    
+    /* Adjacent Sibling (+) */
+    .target-sibling + p { background-color: #dff9fb; }
+    
+    /* General Sibling (~) */
+    .target-sibling ~ span { text-decoration: underline; }
+
+    /* ==========================================
+       ATTRIBUTE SELECTORS
+       ========================================== */
+    /* Presence */
+    input[required] { border: 2px solid #e74c3c; }
+    
+    /* Exact Match */
+    input[type="password"] { background-color: #ffeae6; }
+    
+    /* Dash Matcher */
+    div[lang|="en"] { border: 1px dashed #333; padding: 5px; margin-top: 5px; }
+
+  </style>
+</head>
+<body>
+
+  <h1 id="main-heading">CSS Selectors Playground</h1>
+
+  <!-- Simple & Pseudo Elements -->
+  <div class="card">
+    <h2 class="pseudo-elem">Simple & Pseudo Elements</h2>
+    <p class="drop-cap">Once upon a time, CSS made styling web pages incredibly clean and precise.</p>
+    <p class="dynamic-line">This is a dynamic line test. Resize your browser window and you will notice that only the words fitting on the very first line stay styled in blue caps!</p>
+    <p>Try highlighting/selecting <em>this specific sentence</em> with your mouse to see the custom highlight color.</p>
+    
+    <ul class="custom-list">
+      <li>Item One with a custom marker</li>
+      <li>Item Two with a custom marker</li>
+    </ul>
+  </div>
+
+  <!-- Dynamic Pseudo-Classes -->
+  <div class="card">
+    <h2>Dynamic Pseudo-Classes</h2>
+    <p class="btn-links">
+      <a href="https://example-unfinished-link-12345.com" target="_blank">Unvisited Link (:link)</a> | 
+      <a href="">Visited Link (:visited)</a>
+    </p>
+    <p><em>Hover over the links, and click down on them to see <strong>:hover</strong> and <strong>:active</strong> trigger.</em></p>
+  </div>
+
+  <!-- Structural Pseudo-Classes -->
+  <div class="card struct-container">
+    <h2>Structural Selectors</h2>
+    <p>Paragraph 1: I am the first-child inside this card container.</p>
+    <span>Span 1: I am the first-of-type span element.</span> <br>
+    <span>Span 2: I am the last-of-type span element.</span>
+    <p>Paragraph 2: I am just a middle child.</p>
+    <ul>
+      <li>Row 1 (Odd)</li>
+      <li>Row 2 (Even - styled via nth-child)</li>
+      <li>Row 3 (Odd)</li>
+      <li>Row 4 (Even - styled via nth-child)</li>
+    </ul>
+    <p>Paragraph 3: I am the last-child inside this card container.</p>
+  </div>
+
+  <!-- Combinators -->
+  <div class="card combinator-box">
+    <h2>Combinator Selectors</h2>
+    <p>Direct Child Paragraph (Box has a green left border).</p>
+    <div>
+      <p>Nested Paragraph (No green border because it is a descendant, not a direct child).</p>
+      <span>Deeply nested text still turned orange because of the space (descendant) combinator.</span>
+    </div>
+    
+    <hr>
+    
+    <h4 class="target-sibling">The Reference Sibling Element</h4>
+    <p>I am the Adjacent Sibling (+). I turn light blue because I am directly after the H4.</p>
+    <p>I am just a regular paragraph further down.</p>
+    <span>I am a General Sibling (~), so I get underlined.</span>
+    <span>I am also a General Sibling (~) following the H4, so I get underlined too.</span>
+  </div>
+
+  <!-- Attributes -->
+  <div class="card">
+    <h2>Attribute Selectors</h2>
+    <form onsubmit="return false;">
+      <p>
+        <label>Required Text Field [presence]:</label><br>
+        <input type="text" required placeholder="This has the 'required' attribute">
+      </p>
+      <p>
+        <label>Password Field [exact match]:</label><br>
+        <input type="password" value="secret">
+      </p>
+    </form>
+    
+    <div lang="en">Language block matching exactly "en" [dash matcher].</div>
+    <div lang="en-US">Language block matching "en-US" [dash matcher].</div>
+    <div lang="fr">Language block matching "fr" (Will not be styled).</div>
+  </div>
+
+</body>
+</html>

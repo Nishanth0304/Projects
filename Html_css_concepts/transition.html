@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.box {
+  width: 120px;
+  height: 50px;
+  margin: 15px;
+  background: steelblue;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+
+  transition: transform 2s;
+}
+
+/* Hover on individual element */
+.linear:hover {
+  transform: translateX(300px);
+  transition-timing-function: linear;
+}
+
+.ease:hover {
+  transform: translateX(300px);
+  transition-timing-function: ease;
+}
+
+.ease-in:hover {
+  transform: translateX(300px);
+  transition-timing-function: ease-in;
+}
+
+.ease-out:hover {
+  transform: translateX(300px);
+  transition-timing-function: ease-out;
+}
+
+.ease-in-out:hover {
+  transform: translateX(300px);
+  transition-timing-function: ease-in-out;
+}
+</style>
+</head>
+<body>
+
+<div class="box linear">linear</div>
+<div class="box ease">ease</div>
+<div class="box ease-in">ease-in</div>
+<div class="box ease-out">ease-out</div>
+<div class="box ease-in-out">ease-in-out</div>
+
+</body>
+</html>

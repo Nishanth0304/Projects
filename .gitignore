@@ -1,0 +1,7 @@
+@"
+HandlebarDemo/minikube-linux-amd64
+node_modules/
+dist/
+build/
+.env
+"@ | Set-Content .gitignore

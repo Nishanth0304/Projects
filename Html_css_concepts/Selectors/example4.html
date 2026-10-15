@@ -1,0 +1,72 @@
+<!-- nav
+├── logo
+├── ul
+│   ├── li
+│   ├── li
+│   └── li
+├── div
+│   ├── input
+│   └── icon
+├── header
+├── section
+│   ├── h2
+│   ├── form
+│   │   └── button  ← Matched
+│   └── p
+└── footer -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example 4</title>
+
+    <style>
+        nav > ul + div ~ section button {
+            background-color: orange;
+            color: white;
+            padding: 12px;
+            border: none;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+
+    <h1>My Website</h1>
+
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+
+    <div>
+        <input type="text" placeholder="Search">
+        <span>🔍</span>
+    </div>
+
+    <header>Top Header</header>
+
+    <section>
+
+        <h2>Login Form</h2>
+
+        <form>
+            <button>
+                Matched Button
+            </button>
+        </form>
+
+        <p>Description</p>
+
+    </section>
+
+    <footer>Footer</footer>
+
+</nav>
+
+</body>
+</html>

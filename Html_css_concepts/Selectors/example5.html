@@ -1,0 +1,68 @@
+<!-- article
+├── header
+│   └── h1
+├── section
+│   ├── h2
+│   ├── p
+│   └── img
+├── aside
+├── div
+├── footer
+│   ├── p
+│   └── div
+│       └── span   ← Matched
+└── script -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example 5</title>
+
+    <style>
+        article > header + section ~ footer span {
+            color: white;
+            background-color: purple;
+            padding: 8px;
+            font-size: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+<article>
+
+    <header>
+        <h1>Main Heading</h1>
+    </header>
+
+    <section>
+        <h2>Section Title</h2>
+        <p>Some content</p>
+        <img src="photo.jpg" width="100">
+    </section>
+
+    <aside>Sidebar</aside>
+
+    <div>Extra Content</div>
+
+    <footer>
+
+        <p>Footer Text</p>
+
+        <div>
+            <span>
+                Matched Span
+            </span>
+        </div>
+
+    </footer>
+
+    <script></script>
+
+</article>
+
+</body>
+</html>

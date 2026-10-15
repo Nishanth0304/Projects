@@ -1,0 +1,65 @@
+<!-- div
+├── h1
+├── p
+├── section
+│   ├── h2
+│   └── ul
+│       ├── li
+│       └── li
+├── aside
+├── article
+│   ├── h3
+│   ├── div
+│   │   └── span   ← Matched
+│   └── footer
+└── footer -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example 1</title>
+
+    <style>
+        div > p + section ~ article span {
+            color: red;
+            background-color: yellow;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div>
+    <h1>Main Title</h1>
+
+    <p>Paragraph</p>
+
+    <section>
+        <h2>Section Heading</h2>
+
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ul>
+    </section>
+
+    <aside>Sidebar</aside>
+
+    <article>
+        <h3>Article Heading</h3>
+
+        <div>
+            <span>Matched Element</span>
+        </div>
+
+        <footer>Article Footer</footer>
+    </article>
+
+    <footer>Main Footer</footer>
+</div>
+
+</body>
+</html>
+
